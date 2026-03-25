@@ -28,14 +28,14 @@ def median(data: list) -> float:
 
     return median
 
+# def range(data: list) -> float:
+#     """
+#     """
+#     max_num = data[0]
 
-def range(data: list) -> float:
-    """
-    """
-    max_num = data[0]
-    for item in data: 
-        if item > max_num:
-            max_num = item
+#     for item in data: 
+#         if item > max_num:
+#             max_num = item
 
     min_num = data[0]
     for item in data:
