@@ -1,3 +1,6 @@
+def stats_module(
+
+
 def average(data: list) -> float:
     """
     Calculate average of a list of integers using a for-loop. Assumes data is clean.
@@ -42,3 +45,4 @@ def range(data: list) -> float:
     data_range = max_num - min_num
 
     return f"Minimum: {min_num}, Maximum: {max_num}, Range: {data_range}"
+)
