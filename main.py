@@ -1,6 +1,6 @@
 from data_cleaning import clean_heartrate_data
 from statisticals import average, median, range
-
+import statistics as stats
 
 def run(file: str):
     """
@@ -28,14 +28,18 @@ def run(file: str):
     med = median(cleaned_values)
     rng = range(cleaned_values)
     
+    data_variance = round(stats.variance(cleaned_values),2)
+    
     # print out your data quality measure to the console
     print(f"File: {file}")
+    print(f"This is the variance is {data_variance}")
     print(f"Cleaned Data: {cleaned_values}\nValues extracted from Data: {missing_values}")
    
     # print out your descriptive statistics to the console
-    print(f"This is the average for {file} : {avg}")
-    print(f"This is the median for {file} : {med}")
-    print(f"This is the range for {file} : {rng}\n")
+    print(f"Average : {avg}")
+    print(f"Median: {med}")
+    print(f"Range : {rng}\n")
+
 
 
 if __name__ == "__main__":
