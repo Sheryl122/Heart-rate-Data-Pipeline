@@ -1,3 +1,6 @@
+import statistics as stats
+import math as m
+
 def average(data: list) -> float:
     """
     Calculate average of a list of integers using a for-loop. Assumes data is clean.
@@ -39,6 +42,13 @@ def range(data: list) -> float:
     data_range = max_num - min_num
 
     return f"Minimum: {min_num}, Maximum: {max_num}, Range: {data_range}"
+
+def data_variance(data: list) -> float:
+    calc_variance = round(stats.variance(data),2)
+    standard_dev = round(m.sqrt(calc_variance),2)
+    
+    return calc_variance, standard_dev
+
 
 def rolling_avg(data: list, k: int) -> float:
     """
