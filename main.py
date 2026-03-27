@@ -1,6 +1,6 @@
 from data_cleaning import clean_heartrate_data
 from statisticals import average, median, range, data_variance
-import statistics as stats
+from visuals import lineplot_image
 
 def run(file: str):
     """
@@ -29,6 +29,7 @@ def run(file: str):
     rng = range(cleaned_values)
     
     calc_variance, standard_dev = data_variance(cleaned_values)
+    lineplot_image(cleaned_values)
     
     # print out your data quality measure to the console
     print(f"File: {file}")
@@ -39,7 +40,6 @@ def run(file: str):
     print(f"Average : {avg}")
     print(f"Median: {med}")
     print(f"Range : {rng}\n")
-
 
 
 if __name__ == "__main__":
